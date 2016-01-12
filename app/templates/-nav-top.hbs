@@ -8,6 +8,13 @@
               <img src="assets/images/logo/copilot-logo.svg" alt="Copilot Logo">
             {{/link-to}}
           </li>
+          <li class="user dropdown-nav">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Hi, {{userService.currentUser.firstName}}</a>
+            <ul class="dropdown-menu" role="menu">
+              <li><a href="#">My Profile</a></li>
+              <li><a href="#" {{action "invalidateSession"}}>Log out</a></li>
+            </ul>
+          </li>
         </ul>
       </div>
     </div>

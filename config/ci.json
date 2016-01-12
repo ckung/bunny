@@ -1,0 +1,7 @@
+{
+  "session": {
+    "name": "cn.copilot.ci",
+    "domain": ".aws.conde.io",
+    "mongoStore": "mongodb://copilot-ci-db01.aws.conde.io:10650/copilotApp"
+  }
+}

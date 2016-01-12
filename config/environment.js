@@ -19,18 +19,22 @@ module.exports = function(environment) {
     }
   };
 
-  if (environment === 'development') {
+  if (environment === 'development' || environment === 'test') {
     // ENV.APP.LOG_RESOLVER = true;
-    // ENV.APP.LOG_ACTIVE_GENERATION = true;
+    ENV.APP.LOG_ACTIVE_GENERATION = true;
     // ENV.APP.LOG_TRANSITIONS = true;
     // ENV.APP.LOG_TRANSITIONS_INTERNAL = true;
-    // ENV.APP.LOG_VIEW_LOOKUPS = true;
+    ENV.APP.LOG_VIEW_LOOKUPS = true;
+    ENV.contentApp = "http://copilot.local:4200/search",
+    ENV.authApp = "http://copilot.local:4300";
+    ENV.instanceUrl = '/auth/instance';
+    ENV.logoutUrl = '/auth/logout';
   }
 
   if (environment === 'test') {
     // Testem prefers this...
     ENV.baseURL = '/';
-    ENV.locationType = 'none';
+    ENV.locationType = 'auto';
 
     // keep test console output quieter
     ENV.APP.LOG_ACTIVE_GENERATION = false;
@@ -40,7 +44,25 @@ module.exports = function(environment) {
   }
 
   if (environment === 'production') {
+    ENV.contentApp = 'https://copilot.aws.conde.io/search'
+    ENV.authApp = "http://auth.aws.conde.io";
+    ENV.instanceUrl = '/auth/instance';
+    ENV.logoutUrl = '/auth/logout';
+  }
 
+  if (environment === 'staging') {
+    ENV.contentApp = 'https://stg-copilot.aws.conde.io/search'
+    ENV.authApp = "http://stg-auth.aws.conde.io";
+    ENV.instanceUrl = '/auth/instance';
+    ENV.logoutUrl = '/auth/logout';
+  }
+
+
+  if (environment === 'ci') {
+    ENV.contentApp = 'https://ci-copilot.aws.conde.io/search'
+    ENV.authApp = "http://ci-auth.aws.conde.io";
+    ENV.instanceUrl = '/auth/instance';
+    ENV.logoutUrl = '/auth/logout';
   }
 
   return ENV;

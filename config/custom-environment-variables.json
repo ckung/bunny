@@ -1,0 +1,28 @@
+{
+  "api": "NODE_API",
+  "auth": {
+    "subdirectory": "NODE_AUTH_SUBDIRECTORY",
+    "server": "NODE_AUTH_SERVER",
+    "clientId": "NODE_AUTH_CLIENTID",
+    "clientSecret": "NODE_AUTH_CLIENTSECRET",
+    "routes": {
+      "login": "NODE_AUTH_ROUTES_LOGIN",
+      "logincallback": "NODE_AUTH_ROUTES_LOGINCALLBACK",
+      "logout": "NODE_AUTH_ROUTES_LOGOUT",
+      "instance": "NODE_AUTH_ROUTES_INSTANCE"
+    },
+    "redirect": {
+      "login": {
+        "success": "NODE_AUTH_REDIRECT_LOGIN_SUCCESS",
+        "failure": "NODE_AUTH_REDIRECT_LOGIN_FAILURE"
+      }
+    }
+  },
+  "session": {
+    "name": "NODE_SESSION_NAME",
+    "secret": "NODE_SESSION_SECRET",
+    "domain": "NODE_SESSION_DOMAIN",
+    "maxAge": "NODE_SESSION_MAXAGE",
+    "mongoStore": "NODE_SESSION_MONGOSTORE"
+  }
+}

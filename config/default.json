@@ -1,0 +1,28 @@
+{
+  "api": "http://localhost:8090",
+  "auth": {
+    "subdirectory": "",
+    "server": "http://copilot.local:4300",
+    "clientId": "bunny",
+    "clientSecret": "fc37ccd9-1636-4189-8d8b-d329f9264390",
+    "routes": {
+      "login": "/auth/login",
+      "logincallback": "/auth/logincallback",
+      "logout": "/auth/logout",
+      "instance": "/auth/instance"
+    },
+    "redirect": {
+      "login": {
+        "success": "/",
+        "failure": "/logout"
+      }
+    }
+  },
+  "session": {
+    "name": "cn.copilot.development",
+    "secret": "test123",
+    "domain": ".copilot.local",
+    "maxAge": 1209600000,
+    "mongoStore": "mongodb://localhost/copilotApp"
+  }
+}

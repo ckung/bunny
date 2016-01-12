@@ -1,0 +1,12 @@
+{
+  "api": "http://user-api.aws.conde.io",
+  "auth": {
+    "server": "http://auth.aws.conde.io",
+  },
+  "session": {
+    "name": "cn.copilot.production",
+    "domain": ".aws.conde.io",
+    "maxAge": 1209600000,
+    "mongoStore": "mongodb://copilot-prd-db01.aws.conde.io:10650,copilot-prd-db02.aws.conde.io:10650,copilot-prd-db03.aws.conde.io:10650/copilotApp?replicaSet=copilot-prd"
+  }
+}

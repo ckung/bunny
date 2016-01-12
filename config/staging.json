@@ -1,0 +1,12 @@
+{
+  "api": "http://stg-user-api.aws.conde.io",
+  "auth": {
+    "server": "http://stg-auth.aws.conde.io"
+  },
+  "session": {
+    "name": "cn.copilot.staging",
+    "domain": ".aws.conde.io",
+    "maxAge": 1209600000,
+    "mongoStore": "mongodb://copilot-stg-db01.aws.conde.io:10650,copilot-stg-db02.aws.conde.io:10650,copilot-stg-db03.aws.conde.io:10650/copilotApp?replicaSet=copilot-stg"
+  }
+}
